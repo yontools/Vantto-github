@@ -1,0 +1,6 @@
+{
+  "name": "Vantto",
+  "description": "SaaS B2B de gestión logística de activos en tiempo real para empresas de volquetes en Argentina",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
