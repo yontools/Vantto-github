@@ -1,20 +1,38 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Vantto — Sistema logístico de volquetes
 
-# Run and deploy your AI Studio app
+SaaS B2B de gestión logística de activos en tiempo real para empresas de volquetes en Argentina (Añelo & Neuquén).
 
-This contains everything you need to run your app locally.
+## Stack Tecnológico
+- **Frontend:** Next.js 15 (App Router), React 19, TypeScript
+- **Estilos:** Tailwind CSS v4, Motion (framer-motion)
+- **Base de Datos & Auth:** Supabase (Auth, PostgreSQL, Row Level Security)
+- **UI & Iconos:** Lucide React, Shadcn/ui
 
-View your app in AI Studio: https://ai.studio/apps/97e7655d-f033-4f03-af3e-ba956adad1ac
+## Instrucciones de Setup Local (4 pasos)
 
-## Run Locally
+### 1. Clonar el repositorio e instalar dependencias
+```bash
+git clone https://github.com/yontools/Vantto-github.git
+cd Vantto-github
+npm install
+```
 
-**Prerequisites:**  Node.js
+### 2. Configurar variables de entorno
+Crea un archivo `.env.local` en la raíz del proyecto y copia las variables de `.env.example`:
+```env
+NEXT_PUBLIC_SUPABASE_URL=tu_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_supabase_anon_key
+SUPABASE_SERVICE_ROLE_KEY=tu_service_role_key
+```
 
+### 3. Ejecutar el servidor de desarrollo
+Inicia el entorno de desarrollo local con:
+```bash
+npm run dev
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 4. Compilar para producción
+Para asegurar que todo compile perfectamente y generar los archivos estáticos optimizados:
+```bash
+npm run build
+```
